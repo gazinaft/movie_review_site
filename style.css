@@ -221,23 +221,22 @@ p {
 
 .smallpic {
   grid-column: 2/3;
-  background-color: rgba(41, 16, 124, 0.7)
+  grid-row: auto / span 2;
+  background-color: rgba(41, 16, 124, 0.7);
+  position: relative;
+  overflow: hidden;
 }
 
 .smallpic img {
   float: left;
   height: 100%;
-  width: 45%;
+  width: 100%;
 }
 
 .smallpic div {
-  height: 100%;
-  color: #c5d2ef;
-  font-size: calc(7px + 1.3vw);
-  padding-top: 40px;
-  text-align: center;
+  font-size: calc(17px + 1.3vw);
+  color: #1ee3f1;
 }
-
 .bottomright {
   position: absolute;
   bottom: 35px;
