@@ -75,6 +75,42 @@ p {
   justify-content: space-around;
 }
 
+
+.header form {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.header form input {
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+
+  border: 1px solid grey;
+  float: left;
+  width: 85%;
+  background: #f1f1f1;
+  height: 36px;
+}
+
+.header form button {
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  height: 36px;
+  width: 15%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 10px;
+}
+
+.header form button:hover {
+  background: #0b7dda;
+}
+
+
 .stickybutton {
   background-color: transparent;
   position: sticky;
@@ -141,6 +177,7 @@ p {
 }
 .fourth:hover {
   background-position: 0;
+  box-shadow: 0 0 10px 4px #1ee3f1;
 }
 
 .parallax {
@@ -165,7 +202,7 @@ p {
   grid-row-gap: 1rem;
   grid-column-gap: 1rem;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .format {
@@ -176,7 +213,7 @@ p {
 
 
 .bigPic {
-  grid-row: 1/5;
+  grid-row: 1/3;
   grid-column: 1 / 2;
   overflow: hidden;
   position: relative;
@@ -184,21 +221,36 @@ p {
 
 .smallpic {
   grid-column: 2/3;
-  background-color: #f5f0e1;
+  background-color: rgba(41, 16, 124, 0.7)
 }
 
+.smallpic img {
+  float: left;
+  height: 100%;
+  width: 45%;
+}
+
+.smallpic div {
+  height: 100%;
+  color: #c5d2ef;
+  font-size: calc(7px + 1.3vw);
+  padding-top: 40px;
+  text-align: center;
+}
 
 .bottomright {
   position: absolute;
   bottom: 35px;
   right: 16px;
-  font-size: 4.7vw;
+  font-size: 4.5vw;
   color: #ffffff;
 }
 
 .block {
   height: 50px;
 }
+
+
 
 .row {
   display: flex;
@@ -226,53 +278,13 @@ p {
   width: 100%;
 }
 
-.header form {
-  width: 100%;
-  border-radius: 50%;
-}
-
-.header form input {
-  border-top-left-radius: 22px;
-  border-bottom-left-radius: 22px;
-
-  border: 1px solid grey;
-  float: left;
-  width: 85%;
-  background: #f1f1f1;
-  height: 36px;
-}
-
-.header form button {
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-  height: 36px;
-  width: 15%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding-left: 10px;
-}
-
-.header form button:hover {
-  background: #0b7dda;
-}
-
 li {
   font-size: 0.9em;
 }
 
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 560px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
   .smallpic {
     display: none;
   }
@@ -303,11 +315,12 @@ li {
     flex-flow: column;
   }
   .rowelem {
-    width: 540px;
-    height: 775px;
+    width: 100%;
+    height: max-content;
   }
   .rowelem img {
     height: 693px;
+    width: 100%;
   }
 
   .parallax {
