@@ -71,8 +71,40 @@ h1 {
   display: flex;
   flex-direction: row;
   height: 56px;
-  padding: 10px;
+  padding: 8px;
   justify-content: space-around;
+}
+
+.stickybutton {
+  background-color: transparent;
+  position: sticky;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+  float: right;
+  top: 0px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
+  border-radius: 25px;
+}
+
+.stickybutton:hover {
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+  box-sizing: content-box;
+  width: 150px;
+  outline: 0;
+}
+
+.stickybutton img {
+  float: left;
+  height: 50px;
+
 }
 
 .mybutton {
@@ -163,7 +195,6 @@ h1 {
 
 .block {
   height: 50px;
-  position: relative;
 }
 
 .row {
