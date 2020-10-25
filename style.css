@@ -13,7 +13,16 @@ body {
   
 h1 {
   font-size: 5vw;
-  color: #116EA1;
+  color: #1ee3f1;
+  margin: 4vh;
+  margin-left: 10%;
+}
+
+
+
+p {
+  font-size: calc(17px + 1.1vw);
+  color: #c5d2ef;
 }
 
 .overlay {
@@ -57,15 +66,6 @@ h1 {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-
 .header {
   text-align: center;
   display: flex;
@@ -86,11 +86,12 @@ h1 {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px solid #000000;
+  border: 2px solid #ea18e3;
   cursor: pointer;
   overflow: hidden;
   transition: width 500ms ease-in-out;
   border-radius: 25px;
+  color: #ea18e3
 }
 
 .stickybutton:hover {
@@ -129,10 +130,10 @@ h1 {
 }
 
 .fourth {
-  border-color: #f1c40f;
+  border-color: #ea18e3;
   color: #fff;
-  background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, #ea18e3 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #ea18e3 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   -webkit-transition: background 300ms ease-in-out;
@@ -144,7 +145,7 @@ h1 {
 
 .parallax {
   /* The image used */
-  background-image: url("poster3.png");
+  background-image: url("johnWick.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
@@ -170,7 +171,9 @@ h1 {
 .format {
   margin-left: 10%;
   margin-right: 10%;
+
 }
+
 
 .bigPic {
   grid-row: 1/5;
@@ -202,14 +205,20 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: rgba(30, 61, 89, 0.7);
 }
 
 .rowelem {
-  background-color: #ffc13b;
   height: 470px;
-  min-width: 185px;
+  width: 185px;
+  overflow: hidden;
+  font-size: 30px;
+  text-align: center;
+}
+
+.rowelem button {
+  font-size: 25px;
 }
 
 .rowelem img {
@@ -279,13 +288,48 @@ li {
   }
 }
 
+@media screen and (max-height: 560px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  .format {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .row {
+    flex-flow: column;
+  }
+  .rowelem {
+    width: 540px;
+    height: 1371px;
+  }
+  .rowelem img {
+    height: 693px;
+  }
+
+}
+
+
 
 /*
     Colors and other shit
 */
 
+body {
+  background-color: #14136d;
+}
+
+.rowelem {
+  background-color: rgba(41, 16, 124, 0.7);
+  color: #ffffff;
+}
+
 .header {
-  background-color: #1e3d59;
+  background-color: #14136d;
+
 }
 
 
@@ -295,5 +339,5 @@ li {
 
 footer {
   text-align: center;
-  background-color: #1e3d59;
+  background-color: #14136d;
 }
